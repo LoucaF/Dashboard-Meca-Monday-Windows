@@ -49,9 +49,9 @@ with sync_playwright() as p:
     app_data_path = os.getenv("LOCALAPPDATA")
     user_data_path = os.path.join(app_data_path, "MondayDash\\User Data\\Default")
 
-    context = p.chromium.launch_persistent_context(user_data_path, headless=False, args=["--start-fullscreen", "--force-dark-mode", "--kiosk", "--incognito"], no_viewport=True)
+    context = p.chromium.launch_persistent_context(user_data_path, headless=False, args=["--start-fullscreen", "--force-dark-mode", "--hide-crash-restore-bubble"], no_viewport=True)
 
-    page = context.new_page()
+    page = context.pages[0]
     page.goto(config['url']['dashboard'])
 
     # Get the title of the page
