@@ -25,6 +25,7 @@ Write-Host "Dependencies installed"
 
 # Check if config.yaml exists
 if (-not (Test-Path config.yaml)) {
+    Read-Host -Prompt "Error: config.yaml not found. Please fill and rename config.template.yaml and retry"
     throw "Error: config.yaml not found. Please fill and rename config.template.yaml and retry"
 }
 
