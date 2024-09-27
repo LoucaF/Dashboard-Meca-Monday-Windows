@@ -16,6 +16,9 @@ def login():
     page.get_by_label("Email").fill(username)
     page.get_by_label("Password").fill(password)
 
+    page.click('text="Log in"')
+    page.wait_for_navigation()
+
     #TODO ADD BUTTON CLICK
 
     time.sleep(2)
