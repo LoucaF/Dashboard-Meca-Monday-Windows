@@ -4,6 +4,7 @@
 ## Requirements
 - Python 3.8+
 - Git
+- Powershell
 
 ## Installation:
 1. Clone the repo

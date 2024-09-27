@@ -23,6 +23,11 @@ if(-not (Test-Path $venvPath)) {
 pip install -r requirements.txt
 Write-Host "Dependencies installed"
 
+# Check if config.yaml exists
+if (-not (Test-Path config.yaml)) {
+    throw "Error: config.yaml not found. Please fill and rename config.template.yaml and retry"
+}
+
 $env:PLAYWRIGHT_BROWSERS_PATH="0"
 playwright install chromium
 
