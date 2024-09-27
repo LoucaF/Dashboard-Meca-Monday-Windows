@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 import os
 import yaml
 import time
-from scripts.infoBarManager import closeInfoBar
+from scripts.infoBarManager import closeInfoBar, closeChromiumRestorePages
 
 with open('config.yaml', 'r') as file:
     config = yaml.safe_load(file)
@@ -64,6 +64,8 @@ with sync_playwright() as p:
     time.sleep(5)
 
     closeTheInfoBar()
+    time.sleep(5)
+    closeChromiumRestorePages()
 
     # Keep the window open
     input("Press Enter to close the browser...")

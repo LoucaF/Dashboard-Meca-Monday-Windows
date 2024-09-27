@@ -35,5 +35,3 @@ playwright install chromium
 # To just run it
 python .\main.py
 
-Read-Host -Prompt "Press Enter to exit"
-
