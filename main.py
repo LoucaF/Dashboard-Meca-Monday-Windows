@@ -53,7 +53,7 @@ with sync_playwright() as p:
     page.goto(config['url']['dashboard'])
 
     # Get the title of the page
-    title = page.url()
+    title = page.url
 
     # Check if user is already logged in
     if (title == "https://etseclipse.monday.com/auth/login_monday/email_password"):
