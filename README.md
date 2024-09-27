@@ -7,7 +7,7 @@
 
 ## Installation:
 1. Clone the repo
-`` git clone "needUrlHere" ``
+`` git clone https://github.com/LoucaF/Dashboard-Meca-Monday-Windows.git``
 2. Modify the config.template.yaml with informations
 3. Rename ``config.template.yaml`` to ``config.yaml``
 4. Run ``StartMondayDash.ps1``
