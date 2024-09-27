@@ -5,6 +5,9 @@ if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
     exit
 }
 
+# Update the project 
+git pull origin master
+
 # Check if the venv already exist and if not, create it
 $venvPath = "venv"
 if(-not (Test-Path $venvPath)) {
