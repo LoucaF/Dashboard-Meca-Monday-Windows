@@ -18,7 +18,7 @@ def login():
 
     page.click('text="Log in"')
 
-    time.sleep(2)
+    time.sleep(5)
 
     # If I get a email verification
     if (page.url == 'https://etseclipse.monday.com/auth/login_monday/new_login_detected'):
