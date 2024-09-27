@@ -40,6 +40,7 @@ def closeTheInfoBar():
             break
         except Exception as e:
             print('Image not found retrying')
+            print(e)
             time.sleep(5)
 
 with sync_playwright() as p:
