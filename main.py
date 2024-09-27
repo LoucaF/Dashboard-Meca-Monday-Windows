@@ -20,7 +20,7 @@ def login():
 
     time.sleep(2)
     # If I get a email verification
-    if (page.url() == config['url']['dashboard'].split('.com')[0] + '.com' + '/auth/login_monday/new_login_detected'):
+    if (page.url == config['url']['dashboard'].split('.com')[0] + '.com' + '/auth/login_monday/new_login_detected'):
         newLogin()
 
 
@@ -47,7 +47,7 @@ with sync_playwright() as p:
     app_data_path = os.getenv("LOCALAPPDATA")
     user_data_path = os.path.join(app_data_path, "MondayDash\\User Data\\Default")
 
-    context = p.chromium.launch_persistent_context(user_data_path, headless=False, args=["--start-fullscreen"], no_viewport=True)
+    context = p.chromium.launch_persistent_context(user_data_path, headless=False, args=["--start-fullscreen", "--force-dark-mode"], no_viewport=True)
 
     page = context.new_page()
     page.goto(config['url']['dashboard'])
