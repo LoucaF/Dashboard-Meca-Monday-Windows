@@ -31,7 +31,7 @@ def closeInfoBar():
 
 def closeChromiumRestorePages():
     try:
-        location = pyautogui.locateCenterOnScreen('./images/imagePages.png', confidence=0.7)
+        location = pyautogui.locateCenterOnScreen('./images/imagePages.png', confidence=0.6)
         
         if location:
             x, y = location
