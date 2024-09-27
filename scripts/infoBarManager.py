@@ -7,7 +7,7 @@ import os
 def closeInfoBar():
     current_path = os.getcwd()
     print(f"Current working directory: {current_path}")
-    location = pyautogui.locateCenterOnScreen('./images/image.png', confidence=0.8)
+    location = pyautogui.locateCenterOnScreen('./images/image.png', confidence=0.6)
     
     if location:
         x, y = location
@@ -18,7 +18,7 @@ def closeInfoBar():
         print('Image 1 found')
         return True
 
-    location = pyautogui.locateCenterOnScreen('./images/image2.png', confidence=0.8)
+    location = pyautogui.locateCenterOnScreen('./images/image2.png', confidence=0.7)
     
     if location:
         x, y = location
@@ -31,7 +31,7 @@ def closeInfoBar():
 
 def closeChromiumRestorePages():
     try:
-        location = pyautogui.locateCenterOnScreen('./images/imagePages.png', confidence=0.8)
+        location = pyautogui.locateCenterOnScreen('./images/imagePages.png', confidence=0.7)
         
         if location:
             x, y = location

@@ -1,5 +1,7 @@
 
 config.yaml
 venv/
+
+# Ignore Python bytecode files
 *.pyc
-scripts/__pycache__/
+__pycache__/
