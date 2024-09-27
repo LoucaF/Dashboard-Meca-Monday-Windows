@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 import os
 import yaml
 import time
-from scripts.infoBarManager import closeInfoBar, closeChromiumRestorePages
+from scripts.infoBarManager import closeInfoBar
 
 with open('config.yaml', 'r') as file:
     config = yaml.safe_load(file)
@@ -49,7 +49,7 @@ with sync_playwright() as p:
     app_data_path = os.getenv("LOCALAPPDATA")
     user_data_path = os.path.join(app_data_path, "MondayDash\\User Data\\Default")
 
-    context = p.chromium.launch_persistent_context(user_data_path, headless=False, args=["--start-fullscreen", "--force-dark-mode"], no_viewport=True)
+    context = p.chromium.launch_persistent_context(user_data_path, headless=False, args=["--start-fullscreen", "--force-dark-mode", "--kiosk" "--incognito"], no_viewport=True)
 
     page = context.new_page()
     page.goto(config['url']['dashboard'])
@@ -66,8 +66,6 @@ with sync_playwright() as p:
     time.sleep(5)
 
     closeTheInfoBar()
-    time.sleep(5)
-    closeChromiumRestorePages()
 
     # Keep the window open
     input("Press Enter to close the browser...")

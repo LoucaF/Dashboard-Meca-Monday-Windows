@@ -19,8 +19,3 @@
 ## How to run it
 `` ./StartMondayDash.ps1 ``
 
-
-TODO:
-- Need to reach the dashboard
-- Need to push to github
-- Need to make better doc

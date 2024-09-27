@@ -28,16 +28,3 @@ def closeInfoBar():
         pyautogui.press('f11')
         print('Image 2 found')
         return True
-
-def closeChromiumRestorePages():
-    try:
-        location = pyautogui.locateCenterOnScreen('./images/imagePages.png', confidence=0.68)
-        
-        if location:
-            x, y = location
-            pyautogui.click(x, y)
-            time.sleep(1)
-            pyautogui.click(x, y)
-            print('Image Restore found')
-    except Exception as e:
-        pass
