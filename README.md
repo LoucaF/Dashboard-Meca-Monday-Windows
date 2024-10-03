@@ -1,6 +1,8 @@
 # Monday.com Mec Dashboard for Windows
 ## Made by Louca.f
 
+This code is designed to automatically host a specific page on Monday.com without any watermarks at each Windows startup.
+
 ## Requirements
 - Python 3.8+
 - Git
