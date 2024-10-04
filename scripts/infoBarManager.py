@@ -28,3 +28,4 @@ def closeInfoBar():
         pyautogui.press('f11')
         print('Image 2 found')
         return True
+    
