@@ -65,7 +65,7 @@ with sync_playwright() as p:
 
     time.sleep(5)
         
-    div_element = page.query_selector('div.ncYkm W6y9_ mLsJc')
+    div_element = page.query_selector('div.ncYkm.W6y9_.mLsJc')
     if div_element:
         # Get the 'style' attribute of the div
         style_attr = div_element.get_attribute('style')
